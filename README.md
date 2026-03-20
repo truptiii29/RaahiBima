@@ -1,60 +1,79 @@
-RaahiBima 
+# RahiBima (राहबीमा) 🚀
+### AI-Powered Parametric Income Protection for India’s Q-Commerce Gig Workers
 
-🚀AI-Powered Parametric Income Protection for India’s Q-Commerce Gig WorkersRahiBima is a specialized parametric insurance platform designed for the backbone of India's 10-minute delivery ecosystem (Zepto, Blinkit, Swiggy Instamart). We protect riders from the one thing traditional insurance ignores: lost opportunity cost due to external disruptions.
+<p align="center">
+  <img src="https://img.shields.io/badge/Hackathon-Guidewire_DEVTrails_2026-blue?style=for-the-badge" alt="Hackathon">
+  <img src="https://img.shields.io/badge/Sector-InsurTech-green?style=for-the-badge" alt="Sector">
+  <img src="https://img.shields.io/badge/Status-Phase_1_Complete-orange?style=for-the-badge" alt="Status">
+</p>
 
-📌 Problem Statement
-  For a delivery partner like Ravi (26, Bangalore), a sudden monsoon downpour or a 43°C heatwave isn't just an inconvenience — it’s a financial wipeout.
-  The Gap: 
-    Traditional insurance covers accidents (Health/Life) or vehicles (Motor). No one covers the ₹400–₹600 loss incurred when a rider is forced off the road for 4 hours.
-  The Friction: 
-    Manual claims take weeks. For someone living on weekly pay cycles, "weeks" is too long.
+**RahiBima** is a specialized parametric insurance platform built for the backbone of India's 10-minute delivery ecosystem (**Zepto, Blinkit, Swiggy Instamart**). We protect riders from the one thing traditional insurance ignores: **lost opportunity cost due to external disruptions.**
 
-💡 The RahiBima Solution: 
-  Parametric "Non-Claim" InsuranceRahiBima eliminates the "Claims Department." Payouts are triggered by objective data, not manual reports.
-  Target Persona:
-    Q-Commerce riders in Indian metros.
-  Coverage: 
-    Income loss only (No health/life/accident).
-  Payout Speed:
-    Seconds via UPI, triggered automatically by API consensus.
-  Premium Model:
-    Dynamic weekly micro-payments (₹19 – ₹79) adjusted by zone-specific risk AI.
+---
 
-⛈️ Parametric Triggers (The "Ground Truth" Engine)
-  We use a Multi-Oracle Consensus model. A payout is initiated only when ≥2 independent sources verify a disruption.TriggerThresholdData SourcesSustained Rain≥15mm/hr for ≥45 minsOpen-Meteo, IMDHeat IndexApparent temp ≥42°C (11AM–4PM)Open-MeteoSevere AQIPM2.5 AQI ≥300 for ≥3hrsOpenAQ APIFlood LockIMD Watch + Dark Store inactivityIMD RSS, Platform SignalCivic DisorderSection 144 / Curfew ordersNDMA RSS, NLP Classifier
+## 📌 The Problem
+For a delivery partner like **Ravi (26, Bangalore)**, a sudden monsoon downpour or a 43°C heatwave isn't just an inconvenience—it’s a financial wipeout. 
+* **The Gap:** Traditional insurance covers accidents or vehicles. No one covers the **₹400–₹600 loss** incurred when a rider is forced off the road for 4 hours.
+* **The Friction:** Manual claims take weeks. For someone living on weekly pay cycles, "weeks" is too long.
 
-🛡️ 5-Layer Fraud Defense Architecture
-  To prevent "Flash Mob" attacks (coordinated GPS spoofing), RahiBima employs a proprietary defense stack:
-    Parametric Lock: 
-      Cannot spoof a rainstorm. If the API says it’s sunny, no payout occurs regardless of user reports.
-    Sensor Fingerprinting: 
-      Cross-verifying GPS variance (≥3m/5min) with Accelerometer/Gyroscope data to detect stationary "ghost" riders.
-    GigTrust Score: 
-      A 0.00–1.00 legitimacy rating based on account age, delivery history, and device stability.
-    Zone Saturation Circuit Breaker: 
-      If claims in a zone exceed 2.5x the historical expected rate, payouts are paused for manual batch-verification.
-    Social Graph Analysis:
-      Identifying "Sybil attacks" by detecting clusters of accounts sharing hardware IDs or UPI handles.
+## 💡 The RahiBima Solution
+RahiBima eliminates the "Claims Department." Payouts are triggered by **objective third-party data**, not manual reports.
 
-⚙️ Technical StackBackend: 
-  FastAPI (Python): for high-concurrency async processing.
-  Database: PostgreSQL (Supabase) for real-time disruption subscriptions.
-  AI/ML: LightGBM: Weekly dynamic premium calculation based on rolling 12-week risk.
-        Scikit-learn: Fraud detection and GigTrust scoring.
-  Infrastructure: Celery + Redis for polling environmental APIs every 15 minutes.
+* **Target Persona:** Q-Commerce riders in Indian metros earning ₹800–₹1,200/day.
+* **Coverage:** Pure Income Loss (No health/life/accident coverage).
+* **Payout Speed:** Instant UPI disbursement within seconds of event confirmation.
+* **Premium Model:** Dynamic weekly micro-payments (₹19 – ₹79) adjusted by AI-driven zone risk scores.
 
-📈 Economic ModelWeekly Cycle: 
-  Premiums collected on Mondays; 
-  Payouts disbursed instantly upon events.
-  Dynamic Pricing: Low (₹19) to Surge (₹79) risk bands.
-  Target Loss Ratio: 68–72%.
-  Break-even: 77%.
+---
 
-📅 Roadmap (Guidewire DEVTrails 2026)
-  [x] Phase 1: Concept Validation & Architecture Design (Current)
-  [ ] Phase 2: Policy Management & Dynamic Premium Engine
-  [ ] Phase 3: GigTrust Score Implementation & Instant UPI Payout Integration
-  [ ] Final: Live Dashboard & Pitch Presentation
+## ⛈️ Parametric Triggers (Multi-Oracle Consensus)
+We utilize a **2-of-3 Consensus Model**. No single data source can trigger a payout, ensuring high-fidelity disruption events.
 
+| Trigger Type | Threshold | Data Sources |
+| :--- | :--- | :--- |
+| **Sustained Rain** | ≥15mm/hr for ≥45 mins | Open-Meteo + IMD |
+| **Heat Index** | "Feels like" ≥42°C (11AM–4PM) | Open-Meteo Apparent Temp |
+| **Severe AQI** | PM2.5 AQI ≥300 for ≥3hrs | OpenAQ API |
+| **Flood Zone Lock** | IMD Watch + Dark Store Inactivity | IMD RSS + Platform Signal |
+| **Civic Disorder** | Section 144 / Curfew orders | NDMA RSS + NLP Classifier |
 
-                                                                                                                                                                                      Built by Team MARVELS for GuideWire 2026
+---
+
+## 🛡️ 5-Layer Fraud Defense Architecture
+To maintain a sustainable **70% Loss Ratio**, RahiBima employs a rigorous defense stack:
+
+1. **Parametric Lock:** Disruption must be confirmed by external APIs. You can't spoof a rainstorm.
+2. **Sensor Fingerprinting:** Cross-verifying GPS variance (detecting <0.5m spoofed jitters) with Accelerometer/Gyroscope data.
+3. **GigTrust Score:** A pre-computed legitimacy engine (0.00–1.00) gating every payout based on account age and delivery history.
+4. **Zone Saturation Circuit Breaker:** If claims > 2.5x expected rate, payouts are frozen for manual spot-checks.
+5. **Social Graph Detection:** Identifying Sybil attacks by clustering shared hardware IDs and UPI handles.
+
+---
+
+## ⚙️ Technical Stack
+* **Backend:** `FastAPI` (Python) — Async event processing.
+* **Mobile:** `React Native` (Expo) — Native iOS/Android experience.
+* **Database:** `PostgreSQL` (Supabase) — Real-time disruption triggers.
+* **ML Engine:** `LightGBM` (Risk Scoring) & `Scikit-learn` (Fraud Detection).
+* **Orchestration:** `Celery` + `Redis` — 15-minute environmental polling loops.
+
+---
+
+## 📈 GigTrust Scoring Model
+Payouts are gated by a per-rider score:
+* **0.75 – 1.00 (Trusted):** Instant Auto-approve.
+* **0.50 – 0.74 (Review):** Soft hold (4-hour window).
+* **Below 0.50:** Manual review or rejection.
+
+---
+
+## 📅 Hackathon Roadmap
+- [x] **Phase 1:** Concept Design & Parametric Architecture
+- [ ] **Phase 2:** Registration Flow & Dynamic Premium Calculation
+- [ ] **Phase 3:** GigTrust Engine & Instant UPI Payout Integration
+- [ ] **Final:** Intelligent Dashboard & Pitch Video
+
+---
+
+**Developed for Guidewire DEVTrails 2026**
+*Built with ❤️ by Team StarScream*
