@@ -1,4 +1,4 @@
-# RaAhiBima 🚀
+# RaahiBima 
 ### AI-Powered Parametric Income Protection for India’s Q-Commerce Gig Workers
 
 <p align="center">
@@ -7,17 +7,17 @@
   <img src="https://img.shields.io/badge/Status-Phase_1_Complete-orange?style=for-the-badge" alt="Status">
 </p>
 
-**RahiBima** is a specialized parametric insurance platform built for the backbone of India's 10-minute delivery ecosystem (**Zepto, Blinkit, Swiggy Instamart**). We protect riders from the one thing traditional insurance ignores: **lost opportunity cost due to external disruptions.**
+**RaahiBima** is a specialized parametric insurance platform built for the backbone of India's 10-minute delivery ecosystem (**Zepto, Blinkit, Swiggy Instamart**). We protect riders from the one thing traditional insurance ignores: **lost opportunity cost due to external disruptions.**
 
 ---
 
 ## 📌 The Problem
-For a delivery partner like **Ravi (26, Bangalore)**, a sudden monsoon downpour or a 43°C heatwave isn't just an inconvenience—it’s a financial wipeout. 
+For a delivery partner like **Ramesh (26, Bangalore)**, a sudden monsoon downpour or a 43°C heatwave isn't just an inconvenience—it’s a financial wipeout. 
 * **The Gap:** Traditional insurance covers accidents or vehicles. No one covers the **₹400–₹600 loss** incurred when a rider is forced off the road for 4 hours.
 * **The Friction:** Manual claims take weeks. For someone living on weekly pay cycles, "weeks" is too long.
 
 ## 💡 The RahiBima Solution
-RahiBima eliminates the "Claims Department." Payouts are triggered by **objective third-party data**, not manual reports.
+RaahiBima eliminates the "Claims Department." Payouts are triggered by **objective third-party data**, not manual reports.
 
 * **Target Persona:** Q-Commerce riders in Indian metros earning ₹800–₹1,200/day.
 * **Coverage:** Pure Income Loss (No health/life/accident coverage).
