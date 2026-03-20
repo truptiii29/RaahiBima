@@ -1,4 +1,4 @@
-# RahiBima (राहबीमा) 🚀
+# RahiBima 🚀
 ### AI-Powered Parametric Income Protection for India’s Q-Commerce Gig Workers
 
 <p align="center">
