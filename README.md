@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Status-Phase_1_Complete-orange?style=for-the-badge" alt="Status">
 </p>
 
-**RahiBima** is a specialized parametric insurance platform built for the backbone of India's 10-minute delivery ecosystem (**Zepto, Blinkit, Swiggy Instamart**). We protect riders from the one thing traditional insurance ignores: **lost opportunity cost due to external disruptions.**
+**RaahiBima** is a specialized parametric insurance platform built for the backbone of India's 10-minute delivery ecosystem (**Zepto, Blinkit, Swiggy Instamart**). We protect riders from the one thing traditional insurance ignores: **lost opportunity cost due to external disruptions.**
 
 ---
 
@@ -17,7 +17,7 @@ For a delivery partner, a sudden monsoon downpour or a 43°C heatwave isn't just
 * **The Friction:** Manual claims take weeks. For someone living on weekly pay cycles, "weeks" is too long.
 
 ## 💡 The RaahiBima Solution
-RahiBima eliminates the "Claims Department." Payouts are triggered by **objective third-party data**, not manual reports.
+RaahiBima eliminates the "Claims Department." Payouts are triggered by **objective third-party data**, not manual reports.
 
 * **Target Persona:** Q-Commerce riders in Indian metros earning ₹800–₹1,200/day.
 * **Coverage:** Pure Income Loss (No health/life/accident coverage).
@@ -40,7 +40,7 @@ We utilize a **2-of-3 Consensus Model**. No single data source can trigger a pay
 ---
 
 ## 🛡️ 5-Layer Fraud Defense Architecture
-To maintain a sustainable **70% Loss Ratio**, RahiBima employs a rigorous defense stack:
+To maintain a sustainable **70% Loss Ratio**, RaahiBima employs a rigorous defense stack:
 
 1. **Parametric Lock:** Disruption must be confirmed by external APIs. You can't spoof a rainstorm.
 2. **Sensor Fingerprinting:** Cross-verifying GPS variance (detecting <0.5m spoofed jitters) with Accelerometer/Gyroscope data.
